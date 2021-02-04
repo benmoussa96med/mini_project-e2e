@@ -1,0 +1,1 @@
+export const baseUrl = 'https://dev-842917.oktapreview.com/signin/register';
