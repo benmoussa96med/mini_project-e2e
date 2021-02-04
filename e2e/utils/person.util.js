@@ -6,12 +6,9 @@ export function generatPerson() {
     const lastName = chanceObj.first().toLowerCase();
     const rand = Math.ceil(Math.random() * 100);
     const email = firstName + rand + lastName + '@gmail.com';
-    const password = 'testing';
     return {
         firstName: firstName,
         lastname: lastName,
         email: email,
-        password: password
-
     };
 }
