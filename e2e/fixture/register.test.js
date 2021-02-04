@@ -1,4 +1,4 @@
-import { baseUrl } from '../utils/constant.util';
+import { baseUrl, password } from '../utils/constant.util';
 import { RegisterElements } from '../page-objects/register.po';
 import { generatPerson } from '../utils/person.util';
 
@@ -12,7 +12,7 @@ test('welcome for register new user', async t => {
     await t
         .debug()
         .typeText(RegisterElements.email, person.email)
-        .typeText(RegisterElements.password, person.password)
+        .typeText(RegisterElements.password, password)
         .typeText(RegisterElements.firstName, person.firstName)
         .typeText(RegisterElements.lastName, person.lastname)
         .click(RegisterElements.btnRegister);
