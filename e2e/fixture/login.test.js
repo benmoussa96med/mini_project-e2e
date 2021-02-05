@@ -5,7 +5,8 @@ fixture('Welcome login').page(loginUrl);
 test('welcome for connecte user', async t => {
     //Arrnage
     const email = 'donnelly85harry@gmail.com';
-    const anserQuestion = 'i love play football and i swimming';
+    const question = 'What is your favorite security question?';
+    const anserQuest = 'i love play football and color red and black';
     //Act
     await t
         .debug()
@@ -14,9 +15,8 @@ test('welcome for connecte user', async t => {
         .click(generatLogin.checkRemember)
         .click(generatLogin.singIn)
         .click(generatLogin.selectQuestion)
-        .click(generatLogin.selectOption.withText('What is your favorite security question?'));
-
-    await t.typeText(generatLogin.replyAnswer, anserQuestion)
+        .click(generatLogin.selectOption.withText('What is the name of your first stuffed animal?'))
+        .typeText(generatLogin.customQuestion, question)
         //Asset
 
 })
